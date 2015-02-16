@@ -144,7 +144,7 @@ public class BTree<T extends Comparable<T>> implements ITree<T> {
             // new root, height of tree is increased
             Node<T> newRoot = new Node<T>(null, maxKeySize, maxChildrenSize);
             newRoot.addKey(medianValue);
-            node.parent = newRoot;
+            // node.parent = newRoot; for what？
             root = newRoot;
             node = root;
             node.addChild(left);
