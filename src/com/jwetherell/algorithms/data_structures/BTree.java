@@ -204,9 +204,12 @@ public class BTree<T extends Comparable<T>> implements ITree<T> {
             if (greatest.parent != null && greatest.numberOfKeys() < minKeySize) {
                 this.combined(greatest);
             }
+            
+            /** unneccessary
             if (greatest.numberOfChildren() > maxChildrenSize) {
                 this.split(greatest);
             }
+            */
         }
 
         size--;
